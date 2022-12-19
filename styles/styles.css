@@ -1,17 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600@display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css.map');
 
 :root {
-    --main-color: #9d9d9d
+    --main-color: #9d9d9d;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: #f8faff;
 }
 
 .main-text {
     color: var(--main-color); 
-    font-family: "Roboto";
-     font-weight: me;
+    
+     font-weight: 500;
     font-size: 14px;    
 }
 .main-text:hover {    
         color: #6666CC  
+}
+
+.sidebar {
+width: 294px;
+position: fixed;
+height: 100%;
+left: 0;
+top: 0
+}
+.main-content {
+    margin-left: 294px
 }
 
 .sidebar-brand  {
@@ -23,9 +48,16 @@
     padding-top: 16px;
     
 }
+.sidebar-icon {
+    width: 23px;
+    height: 20px;
+}
 .list-group-item {
     padding-bottom: 17px;
     padding-left: 53px
+}
+.list-group-item a.active {
+    color: #6666CC  
 }
 
 .icon {
@@ -33,5 +65,30 @@
 }
 
 .list-name {
-    padding-left: 19px
+    padding-left: 18px
 }
+.header {
+    padding-top: 22px;
+    
+}
+
+.button-add {
+    background-color: rgba(85, 201, 123, 1);
+    width: 181px;
+    height: 35px;
+}
+.user-wrapper {
+    
+    margin-right: 16px;
+    height: 65px;
+width: 256px;
+background-color: white;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #7d7d7d
+}
+
+
+

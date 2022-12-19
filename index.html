@@ -11,6 +11,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
@@ -24,16 +28,19 @@
         <div class="sidebar-menu">
           <ul class="list-group">
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none main-text d-flex flex-row"
                 ><img
                   src="./images/icons/web-page-home.png"
                   alt="web-page-home"
+                  class="sidebar-icon"
                 />
                 <span class="list-name">Главная</span></a
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a
+                href=""
+                class="text-decoration-none main-text d-flex flex-row active"
                 ><img
                   src="./images/icons/shopping-cart.png"
                   alt="shopping-cart"
@@ -41,7 +48,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img src="./images/icons/megaphone.png" alt="megaphone" /><span
                   class="list-name"
                   >Промоматериалы</span
@@ -49,7 +56,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img src="./images/icons/pie-chart.png" alt="pie-chart" /><span
                   class="list-name"
                   >Статистика</span
@@ -57,7 +64,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img src="./images/icons/wallet.png" alt="wallet" /><span
                   class="list-name"
                   >Баланс</span
@@ -65,7 +72,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img src="./images/icons/profile.png" alt="profile" /><span
                   class="list-name"
                   >Персональные данные</span
@@ -73,7 +80,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img
                   src="./images/icons/information.png"
                   alt="information"
@@ -81,7 +88,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img
                   src="./images/icons/music-and-multi.png"
                   alt="music-and-multi"
@@ -89,7 +96,7 @@
               >
             </li>
             <li class="list-group-item border-0">
-              <a href="" class="text-decoration-none main-text"
+              <a href="" class="text-decoration-none d-flex flex-row main-text"
                 ><img src="./images/icons/logout.png" alt="logout" /><span
                   class="list-name"
                   >Выход</span
@@ -98,6 +105,30 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="main-content">
+        <header class="d-flex justify-content-end header">
+          <div class="crumbs"></div>
+          <div class="d-flex">
+            <div class="message-image">
+              <img src="./images/icons/envelope (1).png" alt="" />
+            </div>
+            <div
+              class="user-wrapper d-flex align-items-center justify-content-around rounded"
+            >
+              <img src="./images/icons/user.png" alt="" />
+              <span class="user-name">Максим Добжанский</span>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="dashboard-container">
+            <button class="btn button-add border-0" type="button">
+              <img src="./images/icons/+.png" alt="" />
+              <small class="text-white">Создай свой магазин</small>
+            </button>
+          </div>
+        </main>
       </div>
     </main>
     <script
