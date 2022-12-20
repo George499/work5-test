@@ -2,6 +2,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css.map");
 :root {
   --main-color: #9d9d9d;
+  --violent-color: #6666CC ;
 }
 
 * {
@@ -120,11 +121,13 @@ body {
 
 .button {
   background-color: rgb(85, 201, 123);
-  width: 181px;
   height: 35px;
   font-size: 12px;
   color: #ffffff;
   line-height: 21px;
+}
+.button.submit {
+  padding: 12px 48px;
 }
 .button.edit {
   margin-right: 10px;
@@ -147,9 +150,12 @@ body {
 
 .user-wrapper {
   margin-right: 16px;
-  height: 65px;
-  width: 256px;
+  padding: 10px 17px;
   background-color: white;
+}
+
+.user-icon {
+  margin-right: 16px;
 }
 
 .user-name {
@@ -200,9 +206,27 @@ body {
 
 .popup {
   width: 692px;
-  height: 519px;
   background-color: white;
   padding: 30px 21px 35px 30px;
+}
+
+.popup-option-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7c7c7c;
+  line-height: 21px;
+}
+
+.input-group-addon {
+  background-color: var(--violent-color);
+}
+
+.form-control {
+  background-color: #e6e6e9;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .warn-icon {

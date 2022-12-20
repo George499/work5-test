@@ -129,33 +129,44 @@
             <div
               class="user-wrapper d-flex align-items-center justify-content-around"
             >
-              <img src="./images/icons/user.png" alt="" />
-              <span class="user-name">Максим Добжанский</span>
+              <img class="user-icon" src="./images/icons/user.png" alt="" />
+              <span class="user-name d-none d-lg-block">Максим Добжанский</span>
             </div>
           </div>
         </header>
         <main>
-          <div class="dashboard-container">
+          <div class="dashboard-container mx-auto">
             <div class="button-add-container">
-              <button class="btn button border-0" type="button">
+              <button
+                class="btn button border-0"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 <img class="button-icon" src="./images/icons/+.png" alt="" />
                 <span class="text-white">Создай свой магазин</span>
               </button>
             </div>
             <h1 class="title">Управление магазинами</h1>
             <div class="shop-table bg-white">
-              <div class="container">
-                <div class="row row-cols-4 row-head">
-                  <div class="col col-title-text">№</div>
+              <div class="container d-none d-xl-block">
+                <div class="row row-cols-lg-3 row-cols-xl-4 row-head">
+                  <div class="col col col-xxl-3 col-xl-1 col-title-text">№</div>
                   <div class="col col-title-text">Название</div>
                   <div class="col col-title-text">Адрес</div>
-                  <div class="col col-title-text">Действие</div>
+                  <div class="col d-none d-xl-block col-title-text">
+                    Действие
+                  </div>
                 </div>
-                <div class="row row-cols-4 row-line border-bottom">
-                  <div class="col col-text">12345</div>
+              </div>
+              <div class="container">
+                <div
+                  class="row row-cols-lg-3 row-cols-xl-4 row-line border-bottom"
+                >
+                  <div class="col col-xxl-3 col-xl-1 col-text">12345</div>
                   <div class="col col-text">Дипломная работа</div>
                   <div class="col col-text">http://www.work5.ru/services</div>
-                  <div class="col d-flex">
+                  <div class="col d-flex btn-group">
                     <button
                       class="btn button active edit border-0 d-flex align-items-center"
                       type="button"
@@ -180,11 +191,13 @@
                     </button>
                   </div>
                 </div>
-                <div class="row row-cols-4 row-line">
-                  <div class="col col-text">12345</div>
+              </div>
+              <div class="container">
+                <div class="row row-cols-lg-3 row-cols-xl-4 row-line">
+                  <div class="col col col-xxl-3 col-xl-1 col-text">12345</div>
                   <div class="col col-text">Дипломная работа</div>
                   <div class="col col-text">http://www.work5.ru/services</div>
-                  <div class="col d-flex">
+                  <div class="col d-flex btn-group">
                     <button
                       class="btn button active edit border-0 d-flex align-items-center"
                       type="button"
@@ -211,45 +224,101 @@
                 </div>
               </div>
             </div>
-            <div class="popup">
-              <h1>Создать магазин</h1>
-              <div class="row row-cols-2 row-line">
-                <div class="row">
-                  <h2>Шаблон</h2>
-                  <input type="text" />
+            <!-- ---popup--- -->
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="popup w-full">
+                    <div
+                      class="popup-title d-flex flex-row align-items-center justify-content-between mb-5"
+                    >
+                      <h2>Создать магазин</h2>
+                      <img
+                        class="cross-icon pointer"
+                        data-bs-dismiss="modal"
+                        src="./images/icons/20563.png"
+                        alt=""
+                      />
+                    </div>
+                    <form>
+                      <div class="row popup-row mb-5">
+                        <div class="form-group col-md-6 mr-5">
+                          <label for="sample" class="popup-option-label"
+                            >Шаблон</label
+                          >
+                          <select
+                            class="form-select popup-option-text"
+                            id="sample"
+                          >
+                            <option>Стандартный</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="color" class="popup-option-label"
+                            >Цветовая схема</label
+                          >
+                          <select
+                            class="form-select popup-option-text"
+                            id="color"
+                          >
+                            <option>Классическая</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                      <label for="basic-addon2" class="form-label">Домен</label>
+                      <div class="input-group mb-5">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Например: ivangrozniy"
+                          aria-label="Recipient's username"
+                          aria-describedby="basic-addon2"
+                        />
+                        <span
+                          class="input-group-text text-white input-group-addon"
+                          id="basic-addon2"
+                          >.work5.ru</span
+                        >
+                      </div>
+
+                      <div class="d-flex mb-5">
+                        <img
+                          class="warn-icon"
+                          src="./images//icons/warn.png"
+                          alt=""
+                        />
+                        <p class="warn-msg">
+                          В названии домена разрешены латиница и “-”,
+                          запрещается использовать словосочетание Work 5. После
+                          создания магазина Вы сможете прикрутить свой домен
+                          (например ivangrozniy.ru). Подробнее по ссылке
+                        </p>
+                      </div>
+                      <div class="d-flex">
+                        <button
+                          type="button"
+                          class="btn button submit unactive edit border-0 d-flex align-items-center justify-content-center"
+                        >
+                          <span class="text-white">Отмена</span>
+                        </button>
+                        <button
+                          type="submit"
+                          class="btn button submit active border-0 d-flex align-items-center justify-content-center"
+                        >
+                          <span class="text-white">Создать</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-                <div class="row">
-                  <h2>Цветовая схема</h2>
-                  <input type="text" />
-                </div>
-              </div>
-              <div>
-                <h2>Домен</h2>
-                <div class="d-flex row">
-                  <input type="text" />
-                  <button class="btn"><span>.work5.ru</span></button>
-                </div>
-              </div>
-              <div class="d-flex">
-                <img class="warn-icon" src="./images//icons/warn.png" alt="" />
-                <p class="warn-msg">
-                  В названии домена разрешены латиница и “-”, запрещается
-                  использовать словосочетание Work 5. После создания магазина Вы
-                  сможете прикрутить свой домен (например ivangrozniy.ru).
-                  Подробнее по ссылке
-                </p>
-              </div>
-              <div class="flex row w-70">
-                <button
-                  class="btn button unactive edit border-0 d-flex align-items-center justify-content-center"
-                >
-                  <span class="text-white">Отмена</span>
-                </button>
-                <button
-                  class="btn button active border-0 d-flex align-items-center justify-content-center"
-                >
-                  <span class="text-white">Создать</span>
-                </button>
               </div>
             </div>
           </div>
